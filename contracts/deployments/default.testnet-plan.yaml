@@ -1,0 +1,46 @@
+---
+id: 0
+name: Testnet deployment
+network: testnet
+stacks-node: "https://stacks-node-api.testnet.stacks.co"
+bitcoin-node: "http://blockstack:blockstacksystem@bitcoind.testnet.stacks.co:18332"
+plan:
+  batches:
+    - id: 0
+      transactions:
+        - contract-publish:
+            contract-name: sbtc-registry
+            expected-sender: ST372CD2K0GXJ4VS62GQRSWXSRPJZGBM78DQVNRQF
+            cost: 238772
+            path: contracts/sbtc-registry.clar
+            anchor-block-only: true
+            clarity-version: 3
+        - contract-publish:
+            contract-name: sbtc-bootstrap-signers
+            expected-sender: ST372CD2K0GXJ4VS62GQRSWXSRPJZGBM78DQVNRQF
+            cost: 238223
+            path: contracts/sbtc-bootstrap-signers.clar
+            anchor-block-only: true
+            clarity-version: 3
+        - contract-publish:
+            contract-name: sbtc-token
+            expected-sender: ST372CD2K0GXJ4VS62GQRSWXSRPJZGBM78DQVNRQF
+            cost: 238080
+            path: contracts/sbtc-token.clar
+            anchor-block-only: true
+            clarity-version: 3
+        - contract-publish:
+            contract-name: sbtc-deposit
+            expected-sender: ST372CD2K0GXJ4VS62GQRSWXSRPJZGBM78DQVNRQF
+            cost: 238104
+            path: contracts/sbtc-deposit.clar
+            anchor-block-only: true
+            clarity-version: 3
+        - contract-publish:
+            contract-name: sbtc-withdrawal
+            expected-sender: ST372CD2K0GXJ4VS62GQRSWXSRPJZGBM78DQVNRQF
+            cost: 239130
+            path: contracts/sbtc-withdrawal.clar
+            anchor-block-only: true
+            clarity-version: 3
+      epoch: "3.0"
